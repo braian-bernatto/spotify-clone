@@ -4,12 +4,12 @@ import useLoadImage from '@/hooks/useLoadImage'
 import { Song } from '@/types'
 import Image from 'next/image'
 
-interface MeidaItemProps {
+interface MediaItemProps {
   data: Song
-  onClick: (id: string) => void
+  onClick?: (id: string) => void
 }
 
-const MediaItem = ({ data, onClick }: MeidaItemProps) => {
+const MediaItem = ({ data, onClick }: MediaItemProps) => {
   const imageUrl = useLoadImage(data)
 
   const handleClick = () => {
